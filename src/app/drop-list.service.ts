@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { of } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -2137,5 +2138,8 @@ export class dropListService{
 
     get() {
         return this.dropList.data.locations;
+    }   
+    gett() {
+        return of(this.dropList.data.locations);
     }   
 }

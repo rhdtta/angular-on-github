@@ -26,7 +26,7 @@ export class CategoriesComponent implements OnInit {
         let j = droplist[i].branches.findIndex((y:any)=> y.name === branch);
         this.categories = droplist[i].branches[j].categories;
 
-        console.log('hello', this.categories);
+        
       })
   }
 

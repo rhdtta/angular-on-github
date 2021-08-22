@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { getAll } from '../state/location.action';
 
 @Component({
   selector: 'rs-homepage',
@@ -6,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private store: Store<{ data: object }>) { }
 
   ngOnInit(): void {
-    console.log(5)
+    this.store.dispatch(getAll());
+    this.store.select('data').subscribe(x => console.log(x));
+    
   }
 
 }
