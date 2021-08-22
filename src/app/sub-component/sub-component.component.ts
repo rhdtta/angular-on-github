@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { dropListService } from '../drop-list.service';
+import { Store } from '@ngrx/store';
+import { obj } from '../state/data.state';
 
 @Component({
   selector: 'rs-sub-component',
@@ -11,7 +12,7 @@ export class SubComponentComponent implements OnInit {
   subcategories = new Array();
   
   constructor(private activatedRoute: ActivatedRoute,
-    private dropListService: dropListService) { }
+    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
@@ -20,13 +21,19 @@ export class SubComponentComponent implements OnInit {
         let branch = paramMap.get('branch');
         let category = paramMap.get('category');
         
-        let droplist = this.dropListService.get();
-        let i = droplist.findIndex((x: any) => x.name === location);
-        let j = droplist[i].branches.findIndex((y: any) => y.name === branch);
-        let k = droplist[i].branches[j].categories.findIndex((z: any) => z.name === category);
+        
+        this.store.subscribe(x => {
+          let droplist = x.data.Location.payload;
+          let i = droplist.findIndex((x: any) => x.name === location);
+          let j = droplist[i].branches.findIndex((y: any) => y.name === branch);
+          let k = droplist[i].branches[j].categories.findIndex((z: any) => z.name === category);
 
-        droplist[i].branches[j].categories[k].subcategories.forEach((x:any) => this.subcategories.push(x));
-        console.log('subcat', this.subcategories)
+          droplist[i].branches[j].categories[k].subcategories.forEach((x:any) => this.subcategories.push(x));
+          console.log('subcat', this.subcategories)
+        });
+
+
+        
       })
   }
 

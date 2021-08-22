@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { dropListService } from '../drop-list.service';
+import { Store } from '@ngrx/store';
+import { obj } from '../state/data.state';
+
 
 @Component({
   selector: 'rs-all-categories',
@@ -11,31 +13,29 @@ export class AllCategoriesComponent implements OnInit {
   allCategories= new Array();
   allCategoriesName = new Array();
   constructor(private activatedRoute: ActivatedRoute,
-    private dropListService: dropListService) { }
+    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
       .subscribe(paramMap => {
         let location = paramMap.get('location');
-        
-        let droplist = this.dropListService.get();
-        
-        let i = droplist.findIndex((x: any) => x.name === location);
-        let branches = droplist[i].branches;
 
-        this.allCategoriesName = [];
-        this.allCategories = [];
-        branches.forEach((x: any) => {
-          x.categories.forEach((y: any) => {
-            if(this.allCategoriesName.indexOf(y.name) < 0){
-              this.allCategoriesName.push(y.name);
-              this.allCategories.push(y);
-            }
+        this.store.subscribe(x => {
+          let droplist = x.data.Location.payload;
+          let i = droplist.findIndex((x: any) => x.name === location);
+          let branches = droplist[i].branches;
+
+          this.allCategoriesName = [];
+          this.allCategories = [];
+          branches.forEach((x: any) => {
+            x.categories.forEach((y: any) => {
+              if(this.allCategoriesName.indexOf(y.name) < 0){
+                this.allCategoriesName.push(y.name);
+                this.allCategories.push(y);
+              }
+            })
           })
-        })
-        // console.log('all', this.allCategories)
-        
-
+        });
       })
   }
 
