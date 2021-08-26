@@ -13,7 +13,7 @@ export class AllSubcategoriesComponent implements OnInit {
   allSubcategoriesName = new Array();
 
   constructor(private activatedRoute: ActivatedRoute,
-    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
+    private store: Store<{data: Array<obj>}>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
@@ -24,8 +24,8 @@ export class AllSubcategoriesComponent implements OnInit {
         this.allSubcategoriesName = [];
         this.allSubcategories = [];
         
-        this.store.subscribe(x => {
-          let droplist = x.data.Location.payload;
+        this.store.subscribe(state => {
+          let droplist = state.data;
           let i = droplist.findIndex((x: any) => x.name === location);
           let branches = droplist[i].branches;
 

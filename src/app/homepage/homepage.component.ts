@@ -9,7 +9,7 @@ import { getAll } from '../state/location.action';
 })
 export class HomepageComponent implements OnInit {
   
-  constructor(private store: Store<{ data: {Location: {payload: Array<object>}} }>) { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
     this.store.dispatch(getAll());

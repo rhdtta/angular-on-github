@@ -1,7 +1,7 @@
 
 
 export interface obj_subcategories {
-    image: string,
+    image: any,
     name: string
 }
 
@@ -13,6 +13,7 @@ export interface obj_categories {
 
 export interface obj_branch {
     branch_id: string,
+    name: string,
     categories: Array<obj_categories>,
 }
 

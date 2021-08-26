@@ -13,7 +13,7 @@ export class CategoriesComponent implements OnInit {
   categories: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
+    private store: Store<{data: Array<obj>}>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
@@ -21,13 +21,12 @@ export class CategoriesComponent implements OnInit {
         let location = paramMap.get('location');
         let branch = paramMap.get('branch');
         
-        this.store.subscribe(x => {
-          let droplist = x.data.Location.payload;
+        this.store.subscribe(state => {
+          let droplist = state.data;
           
           let i = droplist.findIndex((x: any) => x.name === location);
           let j = droplist[i].branches.findIndex((y:any)=> y.name === branch);
           this.categories = droplist[i].branches[j].categories;
-          console.log('asdasdasd', this.categories)
         });
       })
   }

@@ -1,15 +1,13 @@
 import { Injectable } from "@angular/core";
 import { of } from "rxjs";
+import { obj } from "./state/data.state";
 
 @Injectable({
     providedIn: 'root'
 })
 export class dropListService{
     
-    dropList = {
-        "status": "success",
-        "data": {
-          "locations": [
+    dropList: Array<obj> = [
             {
               "dealers_id": "EDIL",
               "opco": "EDIL",
@@ -160,7 +158,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -202,13 +200,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA"},
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -247,7 +245,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -290,13 +288,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -356,7 +354,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -382,12 +380,12 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Facility Maintenance & Cleaning",
                       "image": "facility_and_maintenance.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -426,13 +424,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -463,7 +461,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -501,7 +499,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
@@ -537,7 +535,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -581,13 +579,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -644,7 +642,7 @@ export class dropListService{
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 }
@@ -678,7 +676,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -722,13 +720,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -759,7 +757,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -803,13 +801,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -840,7 +838,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -884,13 +882,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -921,7 +919,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -965,13 +963,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -1009,7 +1007,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -1093,7 +1091,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1149,7 +1147,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1194,7 +1192,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 }
@@ -1222,7 +1220,7 @@ export class dropListService{
                           "name": "Articulated - Engine",
                           "image": "booms_articulated_engine.png"
                         },
-                        { "name": "Atrium Lift" },
+                        { "name": "Atrium Lift", "image": "NA" },
                         { "name": "Straight", "image": "booms_straight.png" },
                         { "name": "Towable", "image": "booms_towable.png" }
                       ]
@@ -1252,7 +1250,7 @@ export class dropListService{
                     {
                       "name": "Facility Maintenance & Cleaning",
                       "image": "facility_and_maintenance.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -1270,7 +1268,7 @@ export class dropListService{
                     {
                       "name": "Material Lift",
                       "image": "material_lifts.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
@@ -1310,7 +1308,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1347,7 +1345,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1396,7 +1394,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Single Man Lifts",
@@ -1469,7 +1467,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Single Man Lifts",
@@ -1528,12 +1526,12 @@ export class dropListService{
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Single Man Lifts",
@@ -1568,7 +1566,7 @@ export class dropListService{
                           "image": "booms_articulated_engine.png"
                         },
                         { "name": "Straight", "image": "booms_straight.png" },
-                        { "name": "Atrium Lift" }
+                        { "name": "Atrium Lift", "image": "NA" }
                       ]
                     },
                     {
@@ -1603,12 +1601,12 @@ export class dropListService{
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Single Man Lifts",
@@ -1671,7 +1669,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Single Man Lifts",
@@ -1730,7 +1728,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1809,7 +1807,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1892,17 +1890,17 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Material Lift",
                       "image": "material_lifts.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1962,7 +1960,7 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 },
@@ -1983,7 +1981,7 @@ export class dropListService{
                           "image": "booms_articulated_engine.png"
                         },
                         { "name": "Straight", "image": "booms_straight.png" },
-                        { "name": "Atrium Lift" },
+                        { "name": "Atrium Lift", "image": "NA" },
                         { "name": "Towable", "image": "booms_towable.png" }
                       ]
                     },
@@ -2031,12 +2029,12 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Material Lift",
                       "image": "material_lifts.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     }
                   ]
                 }
@@ -2070,7 +2068,7 @@ export class dropListService{
                     {
                       "name": "Carry Deck Crane",
                       "image": "carry_deck_crane.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Forklifts",
@@ -2114,13 +2112,13 @@ export class dropListService{
                     {
                       "name": "Telehandlers",
                       "image": "telehandlers.png",
-                      "subcategories": [{ "name": "NA" }]
+                      "subcategories": [{ "name": "NA", "image": "NA" }]
                     },
                     {
                       "name": "Personnel Cart",
                       "image": "personnel_cart.png",
                       "subcategories": [
-                        { "name": "NA" },
+                        { "name": "NA", "image": "NA" },
                         {
                           "name": "Rough Terrain",
                           "image": "personnel_cart_rough_terrain.png"
@@ -2132,14 +2130,8 @@ export class dropListService{
               ]
             }
           ]
-        },
-        "error": {}
-    }
-
+        
     get() {
-        return this.dropList.data.locations;
-    }   
-    gett() {
-        return of(this.dropList.data.locations);
+        return of(this.dropList);
     }   
 }

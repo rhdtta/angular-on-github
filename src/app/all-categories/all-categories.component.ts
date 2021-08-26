@@ -13,15 +13,15 @@ export class AllCategoriesComponent implements OnInit {
   allCategories= new Array();
   allCategoriesName = new Array();
   constructor(private activatedRoute: ActivatedRoute,
-    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
+    private store: Store<{data: Array<obj>}>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
       .subscribe(paramMap => {
         let location = paramMap.get('location');
 
-        this.store.subscribe(x => {
-          let droplist = x.data.Location.payload;
+        this.store.subscribe(state => {
+          let droplist = state.data;
           let i = droplist.findIndex((x: any) => x.name === location);
           let branches = droplist[i].branches;
 

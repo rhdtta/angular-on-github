@@ -9,7 +9,7 @@ export class locationEffects {
     loadLocation$ = createEffect(() => this.actions$
         .pipe(
             ofType('[Location API] Retrieve All Locations'),
-            mergeMap(() => this.dropListService.gett()
+            mergeMap(() => this.dropListService.get()
                 .pipe(
                     map(location => ({ type: '[Location Load] Location Load Success', payload: location})),
                     catchError(() => EMPTY)

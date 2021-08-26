@@ -12,7 +12,7 @@ export class SubComponentComponent implements OnInit {
   subcategories = new Array();
   
   constructor(private activatedRoute: ActivatedRoute,
-    private store: Store<{ data: {Location: {payload: Array<obj>}} }>) { }
+    private store: Store<{data: Array<obj>}>) { }
 
   ngOnInit(){
     this.activatedRoute.paramMap
@@ -22,14 +22,13 @@ export class SubComponentComponent implements OnInit {
         let category = paramMap.get('category');
         
         
-        this.store.subscribe(x => {
-          let droplist = x.data.Location.payload;
+        this.store.subscribe(state => {
+          let droplist = state.data;
           let i = droplist.findIndex((x: any) => x.name === location);
           let j = droplist[i].branches.findIndex((y: any) => y.name === branch);
           let k = droplist[i].branches[j].categories.findIndex((z: any) => z.name === category);
 
           droplist[i].branches[j].categories[k].subcategories.forEach((x:any) => this.subcategories.push(x));
-          console.log('subcat', this.subcategories)
         });
 
 
